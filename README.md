@@ -3,9 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.10.
 
 ## From inside the project directory, add the dependencies using npm
-npm install leaflet
-npm install @types/leaflet
-npm install @asymmetrik/ngx-leaflet
+npm install leaflet,
+npm install @types/leaflet,
+npm install @asymmetrik/ngx-leaflet,
 npm install @turf/turf
 
 ## Development server
