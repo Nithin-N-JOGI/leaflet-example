@@ -10,6 +10,8 @@ import { PopUpService } from './_services/pop-up.service';
 import { ShapeService } from './_services/shape.service';
 import { BorewellMapComponent } from './borewell-map/borewell-map.component';
 import { WaterSupplyMapComponent } from './water-supply-map/water-supply-map.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -26,7 +28,8 @@ import { WaterSupplyMapComponent } from './water-supply-map/water-supply-map.com
     BrowserModule,
     AppRoutingModule,
     LeafletModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [MarkerService,
     PopUpService,

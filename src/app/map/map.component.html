@@ -1,15 +1,41 @@
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Mysore
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-        <li><a (click)="myFunc()">District </a></li>
-        <li><a (click)="myFuncA()">City</a></li>
-        <li><a href="#">Ward</a></li>
-    </ul>
-</div>
-<br>
 <div class="map-container">
+
+
     <div class="map-frame">
+
+        <!-- <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Mysore
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a (click)="myFunc()">District </a></li>
+                <li><a (click)="myFuncA()">City</a></li>
+                <li><a href="#">Ward</a></li>
+            </ul>
+        </div> -->
+        <div>
+            <div class="data_layers_div">
+
+
+                <button type="button" class="btn btn-default" (click)="myFunc()" data-layer_name="borewells">Borewells</button>
+                <button type="button" class="btn btn-default" (click)="myFuncA()" data-layer_name="openwells">Water Supply</button>
+                <button type="button" class="btn btn-default" (click)="myFuncA()" data-layer_name="lakes">Sewerage</button>
+
+
+            </div>
+
+            <div class="form-inline data_layers" style="float:left">
+
+                <input class="form-control form-control-sm ml-3 w-75" style="height: 36px;background-color: white;" type="text" placeholder="Search Wards" aria-label="Search">
+                <button type="submit"><i class="fa fa-search" style=  "  height: 29px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    width: -22%;
+                    padding: 5px"></i></button>
+            </div>
+
+        </div>
+
+
         <div id="map"></div>
     </div>
 </div>

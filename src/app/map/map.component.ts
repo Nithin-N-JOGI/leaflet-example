@@ -2,7 +2,9 @@ import { AfterViewInit, Component } from '@angular/core';
 import * as L from 'leaflet';
 import { ShapeService } from '../_services/shape.service';
 import { PopUpService } from '../_services/pop-up.service';
+import * as turf from '@turf/turf'
 
+import 'leaflet-routing-machine';
 import { icon, Marker } from 'leaflet';
 import { MarkerService } from '../_services/marker.service';
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
@@ -65,16 +67,23 @@ export class MapComponent implements AfterViewInit {
     });
 
     tiles.addTo(this.map);
+
+    
+    
+
   }
+
+
+
   private initStatesLayer() {
     this.states= this.filtered; 
     const stateLayer = L.geoJSON(this.states, {
       style: (feature) => ({
         weight: 3,
         opacity: 0.5,
-        color: '#008f68',
+        color: '#F7C0D4',
         fillOpacity: 0.8,
-        fillColor: '#6DB65B'
+        fillColor: '#f3612c'
       }),
       onEachFeature: (feature, layer) => (
   layer.on({
@@ -112,7 +121,7 @@ export class MapComponent implements AfterViewInit {
       fillColor: '#6DB65B'
     });
   }
- myFunc(){//run m
+ myFunc(){
 alert('myfun');
     this.filtered = this.dummi.filter(d=>d.properties.Ward_No < 20.0 ); 
    
@@ -177,5 +186,11 @@ alert('myfun');
         this.initStatesLayerA();
        
       }
+
+
+
+      
+
+
   }
 

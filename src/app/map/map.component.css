@@ -16,3 +16,26 @@
 #map {
     height: 100%;
 }
+
+.data_layers_div {
+    position: absolute;
+    top: 5px;
+    left: 55%;
+    z-index: 1000;
+    background-color: #FFF;
+    border: 1px solid #d9edf7;
+}
+
+.data_layers {
+    position: absolute;
+    top: 5px;
+    left: 5%;
+    z-index: 1000;
+    align-items: center;
+}
+
+input[placeholder],
+[placeholder],
+*[placeholder] {
+    color: black !important;
+}
